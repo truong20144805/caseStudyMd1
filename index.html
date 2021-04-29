@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music VipPro Max</title>
+    <meta charset="UTF-8">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div class="main">
+  	<p id="logo"><i class="fa fa-music" style="font-size: 90px;color: deeppink"></i>Music Vippro Max</p>
+    <!--- left part --->
+     <div class="left">
+
+      <!--- song img --->
+      <img id="track_image">
+         <div class="volume">
+            <p id="volume_show">100</p>
+            <i class="fa fa-volume-up"  onclick="mute_sound()" id="volume_icon"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+         </div>
+
+     </div>
+
+     <!--- right --->
+  	 <div class="right">
+
+        <div class="show_song_no">
+          <p id="now">1</p>
+          <p>/</p>
+          <p id="total">3</p>
+        </div>
+
+       <!---title & artist --->
+      <p id="title">title.mp3</p>
+      <p id="artist">Artist name</p>
+
+      <!--- middle  --->
+  	 	<div class="middle">
+  	       <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" ></i></button>
+      	   <button onclick="justplay()" id="play"><i class="fa fa-play" ></i></button>
+  	       <button onclick="next_song()" id="next"><i class="fa fa-step-forward" ></i></button>
+  	   </div>
+
+       <!--- song duration  --->
+        <div class="duration">
+           <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+        </div>
+           <button id="auto" onclick="autoplay_switch()">Auto play <i class="fa fa-random"></i></button>
+  	</div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
